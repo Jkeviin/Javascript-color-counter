@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numero = [];
+        var fallo = true;
+        var turno = 0;
+        var nombres = [];
+
+        var reglas ;
+        reglas = "REGLAS:\n";
+        reglas += "Debes agregar un numero nuevo y seguir la secuencia, intenta no olvidar.";
+
+        alert(reglas);
+
+        do{
+            var cantidad = prompt("Cuantos van a jugar? (Maximo 5): ");
+        }while(cantidad>5);
+
+        for(var c = 0 ; c < cantidad ; c++){
+            var x = prompt("Digite el nombre del jugador: "+(c+1));
+            nombres[c] = x;
+        }
+        for(var i = 0; i<=100 && fallo == true ; i++){
+
+            var pregunta = prompt("JUGADOR " + nombres[turno] + ", agrega un numero:");
+            numero.push(pregunta);
+
+            for(var j = 0; j < numero.length && fallo == true ; j++){
+                var secuencia;
+                secuencia = "JUGADOR "+nombres[turno]+" TERMINA LA SECUENCIA \n";
+                secuencia += "Numero de la secuencia: "+(j+1);
+                
+                var pregunta = prompt(secuencia);
+                if(pregunta != numero[j]){
+                    fallo = false;
+                    alert("BUEN INTENTO JUGADOR "+nombres[turno]+" PERO FALLASTE");
+                }else if(j==(numero.length-1)){
+                    alert("BIEN HECHO JUGADOR "+nombres[turno]);
+                }
+            }
+            turno++;
+            if(turno >= cantidad){
+                turno = 0;
+            }
+        }
+
+
+    </script>
+</body>
+</html>

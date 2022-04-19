@@ -1,0 +1,57 @@
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boton{
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+    border: none;
+    border-radius: 100px;
+    border-style:dashed;
+    border-color: white;
+}
+
+.mensaje{
+    width: 320px;
+    height: 100px;
+    font-size: 50px;
+}
+
+#btnRojo{
+    background-color: red;
+}
+#btnAzul{
+    background-color: blue;
+}
+#btnVerde{
+    background-color: green;
+}
+#btnAmarillo{
+    background-color: orange;
+}
+.texto{
+    color: white;
+    font-size: 40px;
+    padding-right: 50px;
+    text-align: left;
+}
+
+#btnSiguiente{
+    margin: 4px;
+    border-radius: 4px;
+    text-align: right;
+}
+
+.score{
+    color: white;
+    text-align: right;
+    margin: 10px;
+}
+
+button:hover{
+    filter: brightness(75%);
+    cursor: pointer;
+}

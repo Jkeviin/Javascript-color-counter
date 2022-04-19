@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="botones.css">
+</head>
+<body>
+    <div id="main">
+        <div><H1><button class="mensaje" onclick="clickEmpezar()" id="btnEmpezar">EMPEZAR</button></H1></div>
+        <div id="Maximo" class="score" style="visibility: hidden" >SCORE: <label  id="score">0</label></div>
+        <div id="Normal" class="score" style="visibility: hidden"> <label class="texto" id="texto"> </label>  MAX SCORE: <label  id="Maxscore">0</label></div>
+
+        <div id="botones">
+        <button class="boton" id="btnRojo" value=0 onclick="clickRojo()" style="visibility: hidden"></button>
+        <button class="boton" id="btnAzul" value=1 onclick="clickAzul()" style="visibility: hidden"></button>
+        <button class="boton" id="btnVerde" value=2  onclick="clickVerde()" style="visibility: hidden"></button>
+        <button class="boton" id="btnAmarillo" value=3 onclick="clickAmarillo()" style="visibility: hidden"></button>
+    </div>
+    
+    <button onclick="clickSiguiente()" style="visibility: hidden;" id="btnSiguiente">SIGUIENTE</button>
+    <button onclick="reiniciarTodo()" style="visibility: hidden;" id="btnReiniciar">REINICIAR</button>
+    </div>
+
+    <script src="prueba.js"></script>
+</body>
+</html>
